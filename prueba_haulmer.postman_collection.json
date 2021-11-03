@@ -1,0 +1,450 @@
+{
+	"info": {
+		"_postman_id": "db9b5e6f-2738-40f3-a4fc-660266aa41c9",
+		"name": "prueba_haulmer",
+		"description": "# Introduction\nLa API permite a un agente el iniciar sesión, reflejado en la obtención de un token, el cual es usado para registrar nuevos issues.\nTambien se pueden obtener el listado de dichos issues, ya sea por nombre de agente, por fecha, o el listado completo.\n\n# Overview\nEsta API responde al problema de prueba.\n\n# Authentication\nEs necesario para ingresar un issue el posee un token (obtenido al momento de usar la ruta /agent). Dicho token es de tipo Bearer, y debe ser ingresado en Authentication para el entorno de Postman.\n\n# Error Codes\nLos codigos de errores no son estandares, dada a la simple naturaleza del problema.\n\n# Rate limit\nNo especificado",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:5000/agent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/agent",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"agent"
+					]
+				},
+				"description": "Inicio de sesión para agentes."
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/agent",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"agent"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:5000/issue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/issue",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"issue"
+					]
+				},
+				"description": "Registra un Issue, necesita un token para autenticar."
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/issue",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"issue"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "localhost:5000/issues",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/issues",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"issues"
+					]
+				},
+				"description": "Obtiene el listado completo de issues"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/issues",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"issues"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "localhost:5000/issues",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/issues",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"issues"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4675"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.8.2"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Nov 2021 09:09:53 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"contenido\": [\n        {\n            \"agente\": 34,\n            \"descripcion\": \"descripcion 1\",\n            \"fecha\": 1635727953,\n            \"id\": \"1\",\n            \"titulo\": \"titulo 1\"\n        },\n        {\n            \"agente\": 80,\n            \"descripcion\": \"descripcion 2\",\n            \"fecha\": 1635727893,\n            \"id\": \"2\",\n            \"titulo\": \"titulo 2\"\n        },\n        {\n            \"agente\": 19,\n            \"descripcion\": \"descripcion 3\",\n            \"fecha\": 1635727833,\n            \"id\": \"3\",\n            \"titulo\": \"titulo 3\"\n        },\n        {\n            \"agente\": 98,\n            \"descripcion\": \"descripcion 4\",\n            \"fecha\": 1635727773,\n            \"id\": \"4\",\n            \"titulo\": \"titulo 4\"\n        },\n        {\n            \"agente\": 6,\n            \"descripcion\": \"descripcion 5\",\n            \"fecha\": 1635727713,\n            \"id\": \"5\",\n            \"titulo\": \"titulo 5\"\n        },\n        {\n            \"agente\": 7,\n            \"descripcion\": \"descripcion 6\",\n            \"fecha\": 1635727653,\n            \"id\": \"6\",\n            \"titulo\": \"titulo 6\"\n        },\n        {\n            \"agente\": 96,\n            \"descripcion\": \"descripcion 7\",\n            \"fecha\": 1635727593,\n            \"id\": \"7\",\n            \"titulo\": \"titulo 7\"\n        },\n        {\n            \"agente\": 82,\n            \"descripcion\": \"descripcion 8\",\n            \"fecha\": 1635727533,\n            \"id\": \"8\",\n            \"titulo\": \"titulo 8\"\n        },\n        {\n            \"agente\": 76,\n            \"descripcion\": \"descripcion 9\",\n            \"fecha\": 1635727473,\n            \"id\": \"9\",\n            \"titulo\": \"titulo 9\"\n        },\n        {\n            \"agente\": 97,\n            \"descripcion\": \"descripcion 10\",\n            \"fecha\": 1635727413,\n            \"id\": \"10\",\n            \"titulo\": \"titulo 10\"\n        },\n        {\n            \"agente\": 92,\n            \"descripcion\": \"descripcion 11\",\n            \"fecha\": 1635727353,\n            \"id\": \"11\",\n            \"titulo\": \"titulo 11\"\n        },\n        {\n            \"agente\": 82,\n            \"descripcion\": \"descripcion 12\",\n            \"fecha\": 1635727293,\n            \"id\": \"12\",\n            \"titulo\": \"titulo 12\"\n        },\n        {\n            \"agente\": 43,\n            \"descripcion\": \"descripcion 13\",\n            \"fecha\": 1635727233,\n            \"id\": \"13\",\n            \"titulo\": \"titulo 13\"\n        },\n        {\n            \"agente\": 37,\n            \"descripcion\": \"descripcion 14\",\n            \"fecha\": 1635727173,\n            \"id\": \"14\",\n            \"titulo\": \"titulo 14\"\n        },\n        {\n            \"agente\": 76,\n            \"descripcion\": \"descripcion 15\",\n            \"fecha\": 1635727113,\n            \"id\": \"15\",\n            \"titulo\": \"titulo 15\"\n        },\n        {\n            \"agente\": 42,\n            \"descripcion\": \"descripcion 16\",\n            \"fecha\": 1635727053,\n            \"id\": \"16\",\n            \"titulo\": \"titulo 16\"\n        },\n        {\n            \"agente\": 49,\n            \"descripcion\": \"descripcion 17\",\n            \"fecha\": 1635726993,\n            \"id\": \"17\",\n            \"titulo\": \"titulo 17\"\n        },\n        {\n            \"agente\": 35,\n            \"descripcion\": \"descripcion 18\",\n            \"fecha\": 1635726933,\n            \"id\": \"18\",\n            \"titulo\": \"titulo 18\"\n        },\n        {\n            \"agente\": 8,\n            \"descripcion\": \"descripcion 19\",\n            \"fecha\": 1635726873,\n            \"id\": \"19\",\n            \"titulo\": \"titulo 19\"\n        },\n        {\n            \"agente\": 55,\n            \"descripcion\": \"descripcion 20\",\n            \"fecha\": 1635726813,\n            \"id\": \"20\",\n            \"titulo\": \"titulo 20\"\n        },\n        {\n            \"agente\": 22,\n            \"descripcion\": \"descripcion 21\",\n            \"fecha\": 1635726753,\n            \"id\": \"21\",\n            \"titulo\": \"titulo 21\"\n        },\n        {\n            \"agente\": 51,\n            \"descripcion\": \"descripcion 22\",\n            \"fecha\": 1635726693,\n            \"id\": \"22\",\n            \"titulo\": \"titulo 22\"\n        },\n        {\n            \"agente\": 51,\n            \"descripcion\": \"descripcion 23\",\n            \"fecha\": 1635726633,\n            \"id\": \"23\",\n            \"titulo\": \"titulo 23\"\n        },\n        {\n            \"agente\": 42,\n            \"descripcion\": \"descripcion 24\",\n            \"fecha\": 1635726573,\n            \"id\": \"24\",\n            \"titulo\": \"titulo 24\"\n        },\n        {\n            \"agente\": 58,\n            \"descripcion\": \"descripcion 25\",\n            \"fecha\": 1635726513,\n            \"id\": \"25\",\n            \"titulo\": \"titulo 25\"\n        },\n        {\n            \"agente\": 19,\n            \"descripcion\": \"descripcion 26\",\n            \"fecha\": 1635726453,\n            \"id\": \"26\",\n            \"titulo\": \"titulo 26\"\n        },\n        {\n            \"agente\": 3,\n            \"descripcion\": \"descripcion 27\",\n            \"fecha\": 1635726393,\n            \"id\": \"27\",\n            \"titulo\": \"titulo 27\"\n        },\n        {\n            \"agente\": 97,\n            \"descripcion\": \"descripcion 28\",\n            \"fecha\": 1635726333,\n            \"id\": \"28\",\n            \"titulo\": \"titulo 28\"\n        },\n        {\n            \"agente\": 50,\n            \"descripcion\": \"descripcion 29\",\n            \"fecha\": 1635726273,\n            \"id\": \"29\",\n            \"titulo\": \"titulo 29\"\n        },\n        {\n            \"agente\": 73,\n            \"descripcion\": \"descripcion 30\",\n            \"fecha\": 1635726213,\n            \"id\": \"30\",\n            \"titulo\": \"titulo 30\"\n        },\n        {\n            \"agente\": 24,\n            \"descripcion\": \"descripcion 31\",\n            \"fecha\": 1635726153,\n            \"id\": \"31\",\n            \"titulo\": \"titulo 31\"\n        },\n        {\n            \"agente\": 49,\n            \"descripcion\": \"descripcion 32\",\n            \"fecha\": 1635726093,\n            \"id\": \"32\",\n            \"titulo\": \"titulo 32\"\n        },\n        {\n            \"agente\": 8,\n            \"descripcion\": \"descripcion 33\",\n            \"fecha\": 1635726033,\n            \"id\": \"33\",\n            \"titulo\": \"titulo 33\"\n        },\n        {\n            \"agente\": 91,\n            \"descripcion\": \"descripcion 34\",\n            \"fecha\": 1635725973,\n            \"id\": \"34\",\n            \"titulo\": \"titulo 34\"\n        },\n        {\n            \"agente\": 31,\n            \"descripcion\": \"descripcion 35\",\n            \"fecha\": 1635725913,\n            \"id\": \"35\",\n            \"titulo\": \"titulo 35\"\n        },\n        {\n            \"agente\": 41,\n            \"descripcion\": \"descripcion 36\",\n            \"fecha\": 1635725853,\n            \"id\": \"36\",\n            \"titulo\": \"titulo 36\"\n        },\n        {\n            \"agente\": 10,\n            \"descripcion\": \"descripcion 37\",\n            \"fecha\": 1635725793,\n            \"id\": \"37\",\n            \"titulo\": \"titulo 37\"\n        },\n        {\n            \"agente\": 14,\n            \"descripcion\": \"descripcion 38\",\n            \"fecha\": 1635725733,\n            \"id\": \"38\",\n            \"titulo\": \"titulo 38\"\n        },\n        {\n            \"agente\": 31,\n            \"descripcion\": \"descripcion 39\",\n            \"fecha\": 1635725673,\n            \"id\": \"39\",\n            \"titulo\": \"titulo 39\"\n        },\n        {\n            \"agente\": 69,\n            \"descripcion\": \"descripcion 40\",\n            \"fecha\": 1635816150,\n            \"id\": \"40\",\n            \"titulo\": \"titulo 40\"\n        },\n        {\n            \"agente\": 3,\n            \"descripcion\": \"descripcion 41\",\n            \"fecha\": 1635816333,\n            \"id\": \"41\",\n            \"titulo\": \"titulo 41\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"42\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"43\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"44\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"45\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"46\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"47\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"48\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"nombre 1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"49\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"nombre 1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"50\",\n            \"titulo\": \"Prueba\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:5000/issues?nombre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/issues?agente=1",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"issues"
+					],
+					"query": [
+						{
+							"key": "agente",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Obtiene el listado completo de issues que pertenecen a un nombre de agente"
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/issues:nombre",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"issues:nombre"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "localhost:5000/issues?nombre",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/issues?agente=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"issues"
+							],
+							"query": [
+								{
+									"key": "agente",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "625"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.8.2"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Nov 2021 09:15:47 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"contenido\": [\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"42\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"43\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"44\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"45\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"46\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"47\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"48\",\n            \"titulo\": \"Prueba\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "localhost:5000/issues?fecha",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:5000/issues?fecha=2021-11-01",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"issues"
+					],
+					"query": [
+						{
+							"key": "fecha",
+							"value": "2021-11-01"
+						}
+					]
+				},
+				"description": "Obtiene el listado completo de issues que pertenecen a una fecha especifica"
+			},
+			"response": [
+				{
+					"name": "localhost:5000/issues?fecha",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/issues?fecha=2021-11-01",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"issues"
+							],
+							"query": [
+								{
+									"key": "fecha",
+									"value": "2021-11-01"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "813"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.8.2"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Nov 2021 09:12:00 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"contenido\": [\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"42\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"43\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"44\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"45\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"46\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"47\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"48\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"nombre 1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"49\",\n            \"titulo\": \"Prueba\"\n        },\n        {\n            \"agente\": \"nombre 1\",\n            \"descripcion\": \"Prueba\",\n            \"fecha\": \"2021-11-01\",\n            \"id\": \"50\",\n            \"titulo\": \"Prueba\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:5000/issues:fecha",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"issues:fecha"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
