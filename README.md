@@ -30,5 +30,12 @@ Cabe destacar de que es necesario tener Docker para poder ejecutar las instrucci
  * Si se ingresa /issues?agente entonces se obtienen todos los issues creador por dicho agente. Es necesario ingresar el nombre del agente.
  * Si se ingresa /issues?fecha entonces se obtienen todos los issues creados en una cierta fecha. Es necesario ingresar la fecha.
  * Si se ingresa /issues entonces se obtienen todos los issues.
+
+El script script_prueba.py se ejecuta de forma estandar, es decir:
+* py script_prueba.py
+
+Dicho script ingresa como usuario "nombre 1", obtiene un token y luego usa dicho token para crear un issue. Es posible modificar los parametros del issue sin problema (excepto por fecha), sin embargo, modificar el nombre y la clave del usuario puede generar conflictos, se recomienda manejar dicho usuario de tal forma que tanto el numero de nombre como clave sea el mismo y estos se encuentren dentro del margen [1, 10].
+
+
    
     
