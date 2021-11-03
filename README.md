@@ -36,6 +36,6 @@ El script script_prueba.py se ejecuta de forma estandar, es decir:
 
 Dicho script ingresa como usuario "nombre 1", obtiene un token y luego usa dicho token para crear un issue. Es posible modificar los parametros del issue sin problema (excepto por fecha), sin embargo, modificar el nombre y la clave del usuario puede generar conflictos, se recomienda manejar dicho usuario de tal forma que tanto el numero de nombre como clave sea el mismo y estos se encuentren dentro del margen [1, 10].
 
-
+Cabe destacar de que el script apunta a localhost:5000, si esta no es la dirección y/o puerto en el cual el servidor esta corriendo entonces es necesario modificar esta parte en el script.
    
     
